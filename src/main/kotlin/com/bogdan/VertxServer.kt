@@ -80,7 +80,7 @@ private fun failureRoutes(router: Router) {
 
     router.get("/error/*").failureHandler { failureRoutingContext ->
         val statusCode = failureRoutingContext.statusCode()
-        // Status code will be 500 for the RuntimeException or 403 for the other failure
+        // Status code will be 500 for the RuntimeException or 403 for the other failure // comment
         val response = failureRoutingContext.response()
         response.setStatusCode(statusCode).end("Sorry! Not today")
     }
