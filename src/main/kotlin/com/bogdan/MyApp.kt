@@ -1,7 +1,11 @@
 package com.bogdan
 
-const val name = "MyName"
-
 fun main(args: Array<String>) {
-    println("Name is $name")
+    extensionFunc()
+}
+
+fun extensionFunc() {
+    fun String.addMe(addition: String) = this + addition
+
+    println("someString".addMe("Added"))
 }
